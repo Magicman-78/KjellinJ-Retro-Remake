@@ -19,6 +19,7 @@ public class Player: MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
+    // Allows player to move the ship and shoot, and controls thrust speed
     private void Update()
     {
         _thrusting = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
@@ -30,8 +31,13 @@ public class Player: MonoBehaviour
         } else {
             _turnDirection = 0.0f;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) {
+            Shoot();
+        }
     }
 
+    // Programs turn speed and turn direction
     private void FixedUpdate()
     {
         if (_thrusting) {
@@ -43,9 +49,11 @@ public class Player: MonoBehaviour
         }
     }
 
+    // Spawns bullets
     private void Shoot()
     {
         Bullet bullet = Instantiate(this.bulletPrefab, this.transform.position, this.transform.rotation);
+        bullet.Project(this.transform.up);
     }
 
 
