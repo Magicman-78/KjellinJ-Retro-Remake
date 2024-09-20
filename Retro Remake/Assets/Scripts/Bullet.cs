@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
         Destroy(this.gameObject, this.maxLifetime);
     }
 
-    // Destroys bullets when it collides with the outside barrier
+    // Destroys bullets when it collides with the anything
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(this.gameObject);

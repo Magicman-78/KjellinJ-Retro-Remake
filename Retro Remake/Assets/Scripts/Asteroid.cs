@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Bson;
 using UnityEngine;
 
 public class Asteroid : MonoBehaviour
@@ -43,6 +44,31 @@ public class Asteroid : MonoBehaviour
         _rigidbody.AddForce(direction * this.speed);
 
         Destroy(this.gameObject, this.maxLifetime);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (gameObject.CompareTag("Bullet"))
+        {
+            if ((this.size * 0.5f) >= this.minSize)
+            {
+                CreateSplit();
+                CreateSplit();
+            }
+
+            Destroy(this.gameObject);
+        }
+
+    }
+
+    private void CreateSplit()
+    {
+        Vector2 position = this.transform.position;
+        position += Random.insideUnitCircle * 0.5f;
+        
+        Asteroid half = Instantiate(this, position, this.transform.rotation);
+        half.size = this.size * 0.5f;
+        half.SetTrajectory(Random.insideUnitCircle.normalized * this.speed);
     }
 
 }  
