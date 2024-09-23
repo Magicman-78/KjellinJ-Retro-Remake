@@ -46,9 +46,10 @@ public class Asteroid : MonoBehaviour
         Destroy(this.gameObject, this.maxLifetime);
     }
 
+    // Destroys asteroid when it comes in contact with something
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
             if ((this.size * 0.5f) >= this.minSize)
             {
@@ -61,6 +62,7 @@ public class Asteroid : MonoBehaviour
 
     }
 
+    // Checks asteroid's size, and if it's large enough then it splits the asteroid into two smaller asteroids, and sends them in a random direction
     private void CreateSplit()
     {
         Vector2 position = this.transform.position;

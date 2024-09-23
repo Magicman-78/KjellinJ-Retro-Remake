@@ -56,6 +56,21 @@ public class Player: MonoBehaviour
         bullet.Project(this.transform.up);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Checks if Player collides with an Asteroid
+        if (collision.gameObject.CompareTag("Asteroid"))
+        {
+            // Sets Player velocity to zero
+            _rigidbody.velocity = Vector3.zero;
+            _rigidbody.angularVelocity = 0.0f;
+            
+            // Stops all components involved with the player
+            this.gameObject.SetActive(false);
 
-
+            // This is the bad way to do this but the tutorial used it to keep the code simple. Typically degrades game
+            FindObjectOfType<GameManager>().PlayerDied();
+        }
+    }
+    
 }
