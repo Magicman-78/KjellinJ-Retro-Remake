@@ -18,6 +18,14 @@ public class GameManager : MonoBehaviour
     {
         this.explosion.transform.position = asteroid.transform.position;
         this.explosion.Play();
+
+        if (asteroid.size < 0.75) {
+            score += 100;
+        } else if (asteroid.size < 1.2f) {
+            this.score += 50;
+        } else {
+            this.score += 25;
+        }
     }
 
     public void PlayerDied()
@@ -53,6 +61,9 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
-        // TODO
+        this.lives = 3;
+        this.score = 0;
+
+        Invoke(nameof(Respawn), this.respawnTime);
     }
 }
