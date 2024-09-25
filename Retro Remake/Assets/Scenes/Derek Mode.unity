@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 777e70fc4a373964ab698f73ecf8cda1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidPrefab: {fileID: -76544695774244358, guid: 8e845ec09eec3a440b138ea3ac2f2305, type: 3}
+  asteroidPrefab: {fileID: -76544695774244358, guid: 018d455e2b3ef1144ab3c2c1e53580f8, type: 3}
   trajectoryVariance: 15
   spawnRate: 2
   spawnDistance: 15

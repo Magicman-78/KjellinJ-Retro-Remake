@@ -22,9 +22,9 @@ public class GameManager : MonoBehaviour
         if (asteroid.size < 0.75) {
             score += 100;
         } else if (asteroid.size < 1.2f) {
-            this.score += 50;
+            score += 50;
         } else {
-            this.score += 25;
+            score += 25;
         }
     }
 
