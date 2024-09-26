@@ -171,7 +171,7 @@ MonoBehaviour:
   trajectoryVariance: 15
   spawnRate: 2
   spawnDistance: 15
-  spawnAmount: 1
+  spawnAmount: 3
 --- !u!1 &146566782
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 146566784}
   - component: {fileID: 146566783}
   m_Layer: 0
-  m_Name: Lives (2)
+  m_Name: Life 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,12 +249,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146566782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5142584, y: 0, z: 0}
+  m_LocalPosition: {x: -6.95, y: 4.387767, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1285808274}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &153737159
 GameObject:
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a0ebd0fc79e6f43a4da75bfada5a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8503434476602115691, guid: fe04bc0cf63d09e4c9975b4594e80d3e, type: 3}
+  bulletPrefab: {fileID: 8503434476602115691, guid: c3850ba07c78f5f449800a517c0c0dd0, type: 3}
   thrustSpeed: 1
   turnSpeed: 1
 --- !u!1 &900156024
@@ -752,7 +752,7 @@ GameObject:
   - component: {fileID: 1285808274}
   - component: {fileID: 1285808273}
   m_Layer: 0
-  m_Name: Lives
+  m_Name: Life 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -821,9 +821,7 @@ Transform:
   m_LocalPosition: {x: -8.464258, y: 4.387767, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2142143584}
-  - {fileID: 146566784}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5885,6 +5883,9 @@ MonoBehaviour:
   respawnInvulnerabilityTime: 3
   lives: 3
   score: 0
+  Life1: {fileID: 1285808272}
+  Life2: {fileID: 2142143582}
+  Life3: {fileID: 1285808272}
 --- !u!4 &1403897549
 Transform:
   m_ObjectHideFlags: 0
@@ -6094,7 +6095,7 @@ GameObject:
   - component: {fileID: 2142143584}
   - component: {fileID: 2142143583}
   m_Layer: 0
-  m_Name: Lives (1)
+  m_Name: Life 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6160,10 +6161,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142143582}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.78425837, y: 0, z: 0}
+  m_LocalPosition: {x: -7.68, y: 4.387767, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1285808274}
-  m_RootOrder: -1
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

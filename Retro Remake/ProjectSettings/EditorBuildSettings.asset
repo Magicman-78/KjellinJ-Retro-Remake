@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 7c71cfa4cfc9ef849898847a29934ee6
+  - enabled: 1
     path: Assets/Scenes/Asteroids.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Hard Mode.unity
+    guid: c42c27a20a6663e4d81efc0556178ebd
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: ced137673e1070f489fca7828a53cafa
+  - enabled: 1
+    path: Assets/Scenes/Derek Mode.unity
+    guid: f1f6ecd524306ce4ca7cda976526723c
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: d24d98f93111a584396286ee6d2f0977
   m_configObjects: {}

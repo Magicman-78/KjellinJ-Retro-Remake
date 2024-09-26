@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,40 @@ public class GameManager : MonoBehaviour
     public int lives = 3;
 
     public int score = 0;
+
+    public GameObject Life1;
+    public GameObject Life2;
+    public GameObject Life3;
+
+    void Start()
+    {
+        Life1.SetActive(true);
+        Life2.SetActive(true);
+        Life3.SetActive(true);
+    }
+
+    private void Update()
+    {
+        if (lives == 2)
+        {
+            Life1.SetActive(false);
+            Life2.SetActive(true);
+            Life3.SetActive(true);
+        }
+
+        if (lives == 1)
+        {
+            Life1.SetActive(false);
+            Life2.SetActive(false);
+            Life3.SetActive(true);
+        }
+        if (lives == 0)
+        {
+            Life1.SetActive(false);
+            Life2.SetActive(false);
+            Life3.SetActive(false);
+        }
+    }
 
     public void AsteroidDestroyed(Asteroid asteroid)
     {
@@ -36,8 +71,10 @@ public class GameManager : MonoBehaviour
         // Subtracts one life if player dies
         this.lives--;
 
+
         // Respawns player after the programmed respawnTime (which is 3.0f)
-        if (this.lives <= 0) { 
+        if (this.lives <= 0) {
+            SceneManager.LoadScene("GameOver");
         } else {
             Invoke(nameof(Respawn), this.respawnTime);
         }
@@ -66,4 +103,5 @@ public class GameManager : MonoBehaviour
 
         Invoke(nameof(Respawn), this.respawnTime);
     }
+
 }
