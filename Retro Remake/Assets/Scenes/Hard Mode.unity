@@ -5883,9 +5883,9 @@ MonoBehaviour:
   respawnInvulnerabilityTime: 3
   lives: 3
   score: 0
-  Life1: {fileID: 146566782}
+  Life1: {fileID: 1285808272}
   Life2: {fileID: 2142143582}
-  Life3: {fileID: 1285808272}
+  Life3: {fileID: 146566782}
 --- !u!4 &1403897549
 Transform:
   m_ObjectHideFlags: 0
