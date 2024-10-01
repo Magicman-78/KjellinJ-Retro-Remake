@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Derek Mode.unity
     guid: f1f6ecd524306ce4ca7cda976526723c
   - enabled: 1
+    path: Assets/Scenes/ColorBlind Mode.unity
+    guid: 76b8a993c60f04243900b8fc3b256e5c
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: d24d98f93111a584396286ee6d2f0977
   m_configObjects: {}
